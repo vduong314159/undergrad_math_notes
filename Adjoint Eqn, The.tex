@@ -1,0 +1,97 @@
+\documentclass{article}
+\title{A soln of a characteristic eqn is either zero everywhere or else can be zero at most once if its roots are real}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{setspace} %line spacing
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem} %to strike out text \sout
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+\begin{center}
+{\Large The Adjoint Equation}
+\end{center}
+If a $2^{nd}$ order linear homogeneous equation is not exact, it can be made exact by multiplying by an appropriate integrating factor $\mu (x)$. Thus we require $\mu (x)$ be such that $\mu (P(x)y" + Q(x)y' + R(x)y) = 0$ can be written in the form $(\mu (x) P(x) y')' + (f(x) y)' = 0$. By equating coefficients in these two equations and eliminating $f(x)$,\textbf{ show }that the function $\mu (x)$ must satisfy 
+
+\begin{equation}
+P\mu " + (2P' - Q)\mu ' + (P" - Q' + R)\mu = 0
+\end{equation}
+
+This is known as the adjoint of the original equation and is important in the advanced theory of differential equations. In general, the problem of solving the adjoing differential equation is as difficult as that of solving the original equation so only occasionally is it possible to find an integrating factor $\mu$ for a $2^{nd}$ order equation.
+
+For a $2^{nd}$ order linear homogeneous differential equation
+
+\begin{equation} \label{eq:2ode}
+p(x)y" + q(x)y' +r(x)y = 0
+\end{equation}
+
+to be exact, there must be an integrating factor, $\mu (x)$, such that 
+
+
+\begin{subequations} 
+\begin{align} \label{eq:eq1}
+	\mu (x) (p(x)y" + q(x)y' + r(x)y) = 0
+\end{align}
+\begin{center}
+and
+\end{center}
+\begin{align} \label{eq:eq2}
+ [\mu (x) p(x)y']' + [f(x) y]' = 0
+\end{align}
+\end{subequations}
+
+Expanding $\eqref{eq:eq2}$ \newline
+\begin{center}
+$[\mu (x) p(x)y']' + [f(x) y]' = 0$
+
+$\mu py" + [\mu p]'y' + f'y + fy' = 0$
+
+$py" + \dfrac{(\mu p)'}{\mu}y' + \dfrac{f'y}{\mu} + \dfrac{fy'}{\mu} = 0$
+
+$py" + [\dfrac{(\mu p)'}{\mu} + \dfrac{f}{\mu}]y' + \dfrac{f'}{\mu}y = 0$
+\end{center}
+
+From $\eqref{eq:2ode}$, we can equate coefficient $r(x)$ and eliminate $f(x)$:
+\begin{center}
+$\dfrac{f'}{\mu} = r(x)$
+
+$f' = r(x)\mu (x)$
+
+$\int f' = \int r \mu $d$x$
+\end{center}
+\begin{equation} \label{r}
+f = \int ru \mathrm{d}x
+\end{equation}
+
+Plugging in $f$
+
+\begin{center}
+$py' + (\dfrac{(\mu p)'}{\mu} + \int r\mu $d$x)y' + ry = 0$
+\end{center}
+
+From $\eqref{eq:2ode}$, again, we can equate its coefficient $q(x)$
+\begin{center}
+$\dfrac{(\mu P)'}{\mu} + \dfrac{\int r \mu \mathrm{d}x}{\mu} = q$
+
+$(\mu p)' + \int r \mu$d$x = Q \mu$
+
+$(\mu p)" + r\mu = (Q \mu )'$
+
+$(\mu ' p + \mu p')' + ru = q'\mu + q\mu '$
+
+$\mu "p + \mu ' p' + \mu 'p' + \mu p" + r\mu = q'\mu + q\mu '$
+
+$p\mu " + (2p' - q)\mu ' + (p" = r -q')\mu = 0$
+\end{center}
+
+
+
+
+\end{document}

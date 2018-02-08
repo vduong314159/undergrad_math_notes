@@ -1,0 +1,99 @@
+\documentclass{article}
+\title{Proof that Euler's Equations can be transformed into an equation with constant coefficients}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{setspace} %line spacing
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem} %to strike out text \sout
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+\begin{theorem}
+Euler equations, equations in the form
+\begin{equation} \label{eq:eqn1}
+t^2y" + \alpha ty' + \beta y = 0
+\end{equation}
+where $t>0$, $\alpha$ and $\beta$ are real constants, can be transformed into an equation with constant coefficients by transforming $x$ into $lnt$.
+\end{theorem}
+
+\begin{proof}
+
+
+\begin{center}
+$t^2y" + \alpha ty' + \beta y = 0$
+
+$t^2\dfrac{\mathrm{d}^2y}{\mathrm{d}x^2} + \alpha t\dfrac{\mathrm{d}y}{\mathrm{d}x} + \beta y = 0$
+\end{center}
+
+\begin{equation}
+x = ln(t)
+\end{equation}
+
+\begin{subequations}
+
+$\dfrac{\mathrm{d}y}{\mathrm{d}t} = \dfrac{\mathrm{d}x}{\mathrm{d}t}\dfrac{\mathrm{d}y}{\mathrm{d}x}$
+
+$\dfrac{\mathrm{d}x}{\mathrm{d}t} = \dfrac{1}{t}$
+
+$\dfrac{\mathrm{d}y}{\mathrm{d}t} = \dfrac{1}{t}\dfrac{\mathrm{d}y}{\mathrm{d}x}$
+
+
+\end{subequations}
+
+\begin{center}
+$t^2\dfrac{\mathrm{d}^2y}{\mathrm{d}t^2} + \alpha t\dfrac{1}{t}\dfrac{\mathrm{d}y}{\mathrm{d}x} + \beta y = 0$
+
+$t^2\dfrac{\mathrm{d}^2y}{\mathrm{d}t^2} + \alpha \dfrac{\mathrm{d}y}{\mathrm{d}x} + \beta y = 0$
+\end{center}
+
+\begin{flushright}
+
+
+$\dfrac{\mathrm{d}^2y}{\mathrm{d}t^2} = \dfrac{\mathrm{d}}{\mathrm{d}t}\dfrac{\mathrm{d}y}{\mathrm{d}t}$
+
+$= \dfrac{\mathrm{d}}{\mathrm{d}t}[\dfrac{\mathrm{d}x}{\mathrm{d}t} \dfrac{\mathrm{d}y}{\mathrm{d}x}]$
+
+$ = \dfrac{\mathrm{d}^2x}{\mathrm{d}t^2} \dfrac{\mathrm{d}y}{\mathrm{d}x} + \dfrac{\mathrm{d}x}{\mathrm{d}t}.\dfrac{\mathrm{d}}{\mathrm{d}t}[\dfrac{\mathrm{d}y}{\mathrm{d}x}]$
+
+$+  \dfrac{\mathrm{d}x}{\mathrm{d}t}  .  \dfrac{\mathrm{d}}{\mathrm{d}t}  [\dfrac{\mathrm{d}x}{\mathrm{d}t}  \dfrac{\mathrm{d}t}{\mathrm{d}y}]$
+
+$+  \dfrac{\mathrm{d}x}{\mathrm{d}t}  .  \dfrac{\mathrm{d}}{\mathrm{d}t}  [\dfrac{\mathrm{d}x}{\mathrm{d}t}  \dfrac{\mathrm{d}t}{\mathrm{d}x} . \dfrac{\mathrm{d}x}{\mathrm{d}y}]$
+
+$+  \dfrac{\mathrm{d}x}{\mathrm{d}t}  .  \dfrac{\mathrm{d}}{\mathrm{d}t}  [{\dfrac{{\mathrm{d}x}}{\mathrm{d}t}}  {\dfrac{\mathrm{d}t}{\mathrm{d}x}} . \dfrac{\mathrm{d}x}{\mathrm{d}y}]$
+
+$+  \dfrac{\mathrm{d}x}{\mathrm{d}t}  .  \dfrac{\mathrm{d}}{\mathrm{d}t}  [ . \dfrac{\mathrm{d}x}{\mathrm{d}y}]$
+
+$+  \dfrac{\mathrm{d}x}{\mathrm{d}t}  .  [\dfrac{\mathrm{d}}{\mathrm{d}x}  \dfrac{\mathrm{d}x}{\mathrm{d}y} . \dfrac{\mathrm{d}x}{\mathrm{d}} ]$
+
+$+  \dfrac{\mathrm{d}x}{\mathrm{d}t}  .  [\dfrac{\mathrm{d^2}y}{\mathrm{d}x^2}  \dfrac{\mathrm{d}x}{\mathrm{d}t}]$
+
+$\dfrac{\mathrm{d}^2y}{\mathrm{d}t^2} = \dfrac{\mathrm{d}^2x}{\mathrm{d}t^2} \dfrac{\mathrm{d}y}{\mathrm{d}x} + (\dfrac{\mathrm{d}x}{\mathrm{d}t})^2.\dfrac{\mathrm{d^2}y}{\mathrm{d}x^2}$
+
+$\dfrac{\mathrm{d}^2y}{\mathrm{d}t^2} =
+\dfrac{-1}{t^2} \dfrac{\mathrm{d}y}{\mathrm{d}x} + \dfrac{1}{t^2.} \dfrac{\mathrm{d^2}y}{\mathrm{d}x^2}$
+
+Going back to \eqref{eq:eqn1},
+
+\begin{center}
+$t^2y" + \alpha ty' + \beta y = 0$
+
+$t^2\dfrac{-1}{t^2} \dfrac{\mathrm{d}y}{\mathrm{d}x} + \dfrac{1}{t^2.} \dfrac{\mathrm{d^2}y}{\mathrm{d}x^2}0 + \alpha t\dfrac{1}{t}\dfrac{\mathrm{d}y}{\mathrm{d}x} + \beta y = 0$
+
+$\dfrac{\mathrm{d^2}y}{\mathrm{d}x^2} + (\alpha -1)\dfrac{\mathrm{d}y}{\mathrm{•}x} + \beta y = 0$
+
+$\uparrow$
+
+An equation with constant coefficients
+\end{center}
+
+\end{flushright}
+
+\end{proof}
+\end{document}

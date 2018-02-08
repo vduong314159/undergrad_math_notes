@@ -1,0 +1,50 @@
+\documentclass{article}
+\title{Laplace Transform}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+I Show that $\mathcal{L} f(ct) = \dfrac{1}{c} F(\dfrac{s}{c})$
+
+\begin{flushright}
+\begin{definition}[Laplace Transform]
+$F(s) = \mathcal{L}f(t), s>a\geq 0$
+$s>ca$
+\end{definition}
+\end{flushright}
+
+\begin{center}
+
+$\mathcal{L} f(ct) = \int_0^\infty e^{-st} f(ct) \mathrm{d}t$
+\end{center}
+
+\begin{flushright}
+$u = ct,   \dfrac{u}{c} = t$
+
+$\dfrac{\mathrm{d}u}{\mathrm{d}t} = c$
+
+$\dfrac{1}{c} \mathrm{d}u = \mathrm{d}t$
+\end{flushright}
+\begin{center}
+$\mathcal{L} f(ct) = \dfrac{1}{c} \int_0^\infty e^{-\dfrac{su}{c}}f(u)\mathrm{d}u$
+
+\begin{flushright}
+$t = u$
+
+$dt = du$
+\end{flushright}
+
+$\mathcal{L} f(ct) = \dfrac{1}{c} F(\dfrac{s}{c})$
+\end{center}
+
+\end{document}

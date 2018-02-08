@@ -1,0 +1,58 @@
+\documentclass{article}
+\title{1st ODE Integrating Factor}
+\author{Vivian Duong}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+\maketitle
+
+Claim: Suppose the First Order Differential Equation
+\begin{equation} \label{eqref:1}
+\frac{dy}{dt} + p(t)y = g
+\end{equation}
+where $p(t)$ and $g(t)$ are $\textbf{continuous}$ functions. Continuous functions have no holes or breaks in it. If you were to draw it, you would never need to pick up your pencil.
+
+\begin{definition} [continuous function]
+A function f(x) is continuous at x=a if
+$\lim_{x\rightarrow a} f(x) = f(a)$
+A function is continuous on the interval [a,b] if it is continuous at each point in the interval.
+\end{definition}
+
+And suppose there exists an integrating factor, $\mu(t)$ where
+\begin{equation}
+\mu(t) = e^{\int p(t)\mathrm{d}t} 
+\end{equation}
+Then the solution of $\eqref{eqref:1}$ is
+\begin{equation}
+y = \frac{\int \mu(t)g(t)\mathrm{d}t + c }{\mu(t)}
+\end{equation}
+
+\begin{proof}
+This proof can also function as step-by-step instructions on how to solve a First Order Differential Equation.
+
+\begin{enumerate}
+\item Multiply both sides of $\ref{eqref:1}$ by $\mu$
+
+$\mu(t)\frac{dy}{dt} + \mu(t)p(t)y = \mu(t)g$
+
+$\mu(t)p(t) = e^{\int p(t)\mathrm{d}t}p(t)
+ = \mu(t)'$
+
+$\mu(t)y' + \mu'(t)y = \mu(t)g$
+
+$(\mu y)' = \mu g$
+
+$\int(\mu y)' \mathrm{d}t = \int\mu g \mathrm{d}t$
+
+$\mu y + c = \int\mu g \mathrm{d}t$
+
+$y(t) =\dfrac{\int\mu(t) g(t) \mathrm{d}t + c}{\mu(t)}$
+
+\end{enumerate}
+\end{proof}
+\end{document}

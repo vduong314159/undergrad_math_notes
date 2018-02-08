@@ -1,0 +1,71 @@
+\documentclass{article}
+\title{Complex Roots of the Characteristic Equation}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+\maketitle
+
+Prove that $y_1=cost$ and $y_2=sint$ are a fundamental set of solutions of $y" + y = 0$ and that the Wronskian isn't zero. 
+\begin{definition}[characteristic equation]
+The characteristic equation of a $2^{nd}$ order differential equation is \newline
+$ay" + by' + cy = 0$
+\end{definition}
+
+\begin{equation} \label{eqref:1}
+y" + y = 0 
+\end{equation}
+is a characteristic equation where a = 1, b = 0, c = 1.
+
+\begin{theorem}
+Suppose the characteristic equation:
+$ay" + by' + cy = 0$
+
+Then, $y = e^{rt}$ where r is defined as
+
+$ar^2 + br + c = 0$
+\end{theorem}
+
+Solving for r and finding the solutions for equation $\eqref{eqref:1}$
+\begin{center}
+$y" + y = 0$
+
+$r^2 + r = 0$
+
+$r^2 = -1$
+
+$r_1 = i, r_2 = -i$
+
+$y_1 = ce^{it}$ and $y_2 = ce^{-it}$
+\end{center}
+
+\begin{theorem} [Euler's Formula]
+$e^{it} = cost + isint$
+\end{theorem}
+
+$y_1 = c_1cost + c_2isint$ and $y_2 = c_3cos(-t) + c_4sin(-t)$
+
+\begin{theorem} [Trigonometric Formulas]
+$sin(-t) = -sin(t)$
+
+$cos(-t) = cos(t)$
+
+\end{theorem} 
+\begin{definition}[General Solution of a Homogeneous Differential Equation]
+The general solution of a homgeneous differential equation is the sum of its solutions. So if $y_1$ and $y_2$ is a solution, the general solution, $y$, is $y = y_1 + y_2$
+\end{definition}
+$y = c_1cost + c_2sint$
+
+$c_3$ and $c_4$ is absorbed by $c_1$ and $c_2$ 
+
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass{article}
+\title{Exact Equation}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+\begin{proof}
+\begin{theorem}
+Given $M(x,y) + N(x,y)\dfrac{\mathrm{d}y}{\mathrm{d}x} = 0$, $M_y=N_x$, and $\psi (x,y(x)) = \int M\mathrm{d}y = \int N\mathrm{d}x$, $\psi(x,y) = c$, which is the implicit solution.
+\end{theorem}
+
+\begin{center}
+$\psi_x = M$
+
+$\psi_y = N$
+
+$\psi_x + \psi_y\dfrac{\mathrm{d}y}{\mathrm{d}x} = 0$
+
+
+$\psi_x\mathrm{d}x + \psi_y\mathrm{d}y = 0$
+
+
+$\dfrac{\partial \psi}{\partial x}\dfrac{\mathrm{d}x}{\mathrm{d}x} + \dfrac{\partial \psi}{\partial y}\dfrac{\mathrm{d}y}{\mathrm{d}x} =0$
+
+$\int \dfrac{\mathrm{d}}{\mathrm{d}x} \psi(x,y(x)) = \int 0$
+\end{center}
+\begin{flushright}
+\begin{definition}[Partial Derivatives Chain Rule]
+
+
+$\dfrac{\mathrm{d}}{\mathrm{d}t}(z(x_1,...,x_n)) = \dfrac{\partial z}{\partial x_1}\dfrac{\partial x_1}{\partial t} + \dfrac{\partial z}{\partial x_2}\dfrac{\partial x_2}{\partial t} + ... + \dfrac{\partial z}{\partial x_n}\dfrac{\partial x_n}{\partial t}$
+
+\end{definition}
+\end{flushright}
+\begin{center}
+$\psi (x,y) = C$
+\end{center}
+
+\end{proof}
+\end{document}

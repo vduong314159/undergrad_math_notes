@@ -1,0 +1,167 @@
+\documentclass{article}
+\title{2nd ODE Repeated Roots}
+\author{Vivian Duong}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\maketitle
+Prove that the 2nd root of a characteristic equation of repeated roots is $te^{r_2t}$. Suppose that $r_1$ and $r_2$ are roots of $ar^2 + br + c = 0$ and that $r_1 \neq r_2$; then $e^{r_1t}$ and $e^{r_2t}$ are solutions of the differential equation $ay" + by' + cy = 0$. Show that $\phi(t; r_1, r_2) = \frac{e^{r_2t}-e^{r_1t}}{r_2-r_1}$ is also a solution for $r_2 \neq r_1$. Then think of $r_1$ as fixed and use $L'H\hat{o}pital's Rule$ to evaluate the limit of $\phi(t:r_1, r_2)$ as $r_2\rightarrow r_1$, thereby obtaining the 2nd solution in the case of equal roots.
+
+Suppose the 2nd Order Differential Equation (ODE)
+\begin{equation} \label{eqref:1}
+ay" + by' + c =0
+\end{equation}
+and $\phi$ is a solution.
+
+Then its characteristic equation is
+\begin{equation} \label{eqref:2}
+ar" + br' + c = o
+\end{equation}
+
+Now suppose
+\begin{equation}
+r_1 \neq r_2
+\end{equation}
+
+Therefore,
+
+\begin{equation}
+\phi_1 = e^{r_1t}
+\end{equation}
+and
+\begin{equation}
+\phi_2 = e^{r_2t}
+\end{equation}
+are solutions of $\eqref{eqref:1}$
+
+To show that 
+\begin{equation} \label{eqref:6}
+\phi = \dfrac{e^{r_2t}-e^{r_1t}}{r_2-r_1}
+\end{equation}
+is a solution, plug in $\phi$:
+\begin{equation}
+a\phi" + b\phi' +c\phi = 0
+\end{equation}
+We know $\phi$ from $\eqref{eqref:6}$
+
+\begin{equation}
+\phi' = \dfrac{r_2e^{r_2t}-r1e^{r_1t}}{r_2-r_1}
+\end{equation}
+
+\begin{equation}
+\phi" = \dfrac{r_2^2e^{r_2t}-r_1^2e^{r_1t}}{r_2-r_1}
+\end{equation}
+
+Actually plugging in $\phi$
+\begin{center}
+$a(\dfrac{r_2^2e^{r_2t}-r_1^2e^{r_1t}}{r_2-r_1}) + b(\dfrac{r_2^2e^{r_2t}-r_1^2e^{r_1t}}{r_2-r_1}) + c(\dfrac{r_2^2e^{r_2t}-r_1^2e^{r_1t}}{r_2-r_1}) = 0$
+
+$(\dfrac{1}{r_2-r_1})[a(r_2^2e^{r_2t}-r_1^2e^{r_1t}) + b(r_2e^{r_2t}-r1e^{r_1t}) + c(e^{r_2t}-e^{r_1t}) = 0$
+
+$(\dfrac{1}{r_2-r_1})[e^{r_1t}(ar_1^2 +br_1 + c) - e^{r_2t}(ar_2^2 + br_2 + c)]=0$
+\end{center}
+
+From $\eqref{eqref:2}$, we know that
+
+\begin{center}
+$(\dfrac{1}{r_2-r_1})[e^{r_1t}(0) - e^{r_2t}(0)]=0$
+
+$(\dfrac{1}{r_2-r_1})[0]=0$
+
+$0 = 0$
+\end{center}
+
+Therefore, we know for sure that $\phi$ is a solution of $\eqref{eqref:1}$
+
+\begin{center}
+$ \lim_{r_2 \rightarrow r_1} \phi $
+
+$  \lim_{r_2 \rightarrow r_1} \dfrac{e^{r_2t}-e^{r_1t}}{r_2-r_1} $
+\end{center}
+
+Using $L'h/hat{o}pital's Rule$ by integrating $\phi$ with respect to $r_2$
+
+\begin{center}
+$  \lim_{r_2 \rightarrow r_1} \dfrac{te^{r_2t}}{1} $
+
+
+$te^{r_1t}$
+\end{center}
+Therefore, when $r_1 = r_2$, the second solution of $\eqref{eqref:1}, \phi_2 = te^{rt}$
+
+\newpage
+
+Prove that the second solution for a characteristic equation, ay" + by' + cy = 0, with repeated roots is $cte^{at}$.
+
+One way to prove this is with using two pieces of information:
+
+\begin{enumerate}
+\item The characteristic equation for repeated roots is of the form 
+\begin{equation} \label{eqref:10}
+y" + 2ay' + a^2y = 0
+\end{equation}
+\item \begin{definition} [Abel's Formula]
+Suppose $ y" + p(t)y' + q(t)y = 0$
+\begin{equation}
+Wronskian(y_1, y_2) = ce^{-\int p(t) \mathrm{d}t} 
+\end{equation}
+\begin{center}
+det$
+\begin{vmatrix}
+y_1 & y_2\\
+y_1' & y_2'
+\end{vmatrix}
+= ce^{-\int p(t) \mathrm{d}t}
+$
+\end{center}
+\end{definition}
+\end{enumerate}
+
+To show that $\eqref{eqref:10}$ is a characteristic equation with repeated roots.
+\begin{center}
+$y" + 2ay' + a^2y = 0$
+$r^2 + 2ar + a^2 = 0$
+$(r + a)^2 = 0$
+$r_1 = r_2 = -a$
+\end{center}
+Therefore, the Wronskian of the characteristic equation with repeated roots $\eqref{eqref:10}$ is $ce^{-int 2a \mathrm{d}t}$.
+
+\begin{center}
+$W(y_1,y_2) = ce^{-\int 2a \mathrm{d}t}$
+
+$W(y_1,y_2) = ce^{-2at}$
+
+$W(y_1,y_2) = ce^{-2at}$
+
+
+det$\begin{vmatrix}
+y_1 & y_2\\
+y_1' & y_2'
+\end{vmatrix}= ce^{-2at}
+\newline
+\begin{vmatrix}
+e^{-at} & y_2\\
+-ae^{-at} & y_2'
+\end{vmatrix}
+= ce^{-2at}
+$
+\newline
+
+$y_2'e^{-at} - ae^{at}y_2 = ce^{-2at}$
+
+$(e^{-at}y_2)' = ce^{-2at}$
+
+$e^{-at}y_2 = c_1te^{-2at} + c_2e^{-2at}$
+
+$y_2 = c_1te^{-at} + c_2e^{-at} $
+
+$c_2e^{-at}$ absorbs into $y_1 = ce^{-at}$
+
+$y_2 = cte^{-at}$
+\end{center}
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass{article}
+\title{Complex Roots of the Characteristic Equation}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+The gamma function is denoted by $\Gamma(p$) and is defined by the integral
+
+\begin{equation}
+\Gamma(p+1) = \int_o^\infty e^{-x}x^p\mathrm{d}x
+\end{equation}
+
+The integral converges as $x \rightarrow \infty$ for all $p$. For $p < 0$ it is also improper because the integrand becomes unbounded as $x \rightarrow 0$. However, the integral can be shown to converge at $x=0$ for $p>-1$.
+
+I Show that , for $p>0$,
+
+\begin{equation}\label{eqref:1}
+\Gamma(p+1) = p\Gamma(p)
+\end{equation}
+
+To begin,
+\begin{center}
+$\Gamma(p+1) = \int_0^\infty e^{-x}x^p\mathrm{d}x$
+\end{center}
+
+\begin{flushright}
+$\int u \mathrm{d}v = uv - \int v \mathrm{d}u$
+
+$u = x^p, v = e^{-x}$
+
+$du = px^{p-1}, dv = -e^{-x}$
+\end{flushright}
+
+\begin{center}
+$ = \lim_{A \rightarrow \infty} [\dfrac{x^p}{e^x}|_0^A] + p \int_0^\infty e^xx^{p-1} \mathrm{d}x$
+
+$ = \lim_{A \rightarrow \infty} \dfrac{A^p}{e^A} - \dfrac{0^p}{e^0} + p \int_0^\infty e^xx^{p-1} \mathrm{d}x$
+
+$ =  p \int_0^\infty e^xx^{p-1} \mathrm{d}x$
+
+$ = p\Gamma (p)$
+\end{center}
+
+II Show that $\Gamma(1) = 1$
+\begin{center}
+$\Gamma(p) = \int_0^\infty e^xx^{p-1} \mathrm{d}x$
+
+$\Gamma(1) = \int_0^\infty e^xx^{0} \mathrm{d}x$
+
+$\Gamma(1) = \int_0^\infty e^x \mathrm{d}x$
+
+$\Gamma(1) = lim_{A \rightarrow \infty} [-e^{-x}|_0^A]$
+
+$\Gamma(1) = 0 -(-1)$
+
+$\Gamma(1) = 1$
+\end{center}
+
+III Show that if $p$ is a positive integer n,
+\begin{center}
+$\Gamma(n+1) = n!$
+
+$\Gamma(p+1) = p\Gamma (p)$
+
+$\Gamma(n+1) = n\Gamma (n)$
+
+$ = n(n-1)\Gamma (n-1)$
+
+$ = n(n-1)(n-2)\Gamma (n-2)$
+
+$ = n(n-1)(n-2)...\Gamma (1)$
+
+$ = n(n-1)(n-2)...3.2.1$
+\end{center}
+\begin{flushright}
+$\Gamma(1) = 1$
+\end{flushright}
+\begin{center}
+$ \Gamma (n+1)= n!$
+\end{center}
+
+IV Show that, for p>0, 
+\begin{equation}
+p(p+1)(p+2)...(p+n-1) = \dfrac{\Gamma (p+n)}{\Gamma (p)}
+\end{equation}
+
+\begin{flushright}
+Recall $\eqref{eqref:1}$
+$\Gamma(p+1) = p\Gamma(p)$ for $p>0$
+\end{flushright}
+\begin{center}
+Let $\Gamma (p+n) = p\Gamma (p+n)$ for $(p+n)>0$
+
+$ = (p+n-1)\Gamma (p+n-1)$
+
+$ = (p+n-2) \Gamma (p+n-2)$
+
+.
+
+:
+
+$\Gamma (p+n) = (p+n-1)(p+n-2)...(p+2)(p+1)p\Gamma (p)$
+
+$\dfrac{\Gamma (p+n)}{\Gamma (p)} = (p+n-1)(p+n-2)...(p+2)(p+1)p$
+
+
+\end{center}
+\end{document}

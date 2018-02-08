@@ -1,0 +1,74 @@
+\documentclass{article}
+\title{2 Proofs that the Derivative of x to the nth power equals nx to the n-1 power}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\maketitle
+Two proofs that
+$\dfrac{\mathrm{d}}{\mathrm{d}x} x^n = nx^{n-1}$
+
+
+\begin{proof}
+\begin{center}
+Here is the first one. 
+\newline 
+Let $ y = x^n$
+
+$ln(y) = ln(x^n)$
+
+$ln(y) = nln(x)$
+
+$\dfrac{\mathrm{d}}{\mathrm{d}x}[ln(y(x))] = \dfrac{\mathrm{d}}{\mathrm{d}x}[nln(x)]$
+
+
+$\dfrac{\mathrm{d}x}{\mathrm{d}y}.\dfrac{\mathrm{d}y}{\mathrm{d}x} = n \dfrac{1}{x}$
+
+$\dfrac{1}{y}.\dfrac{\mathrm{d}y}{\mathrm{d}x} = n \dfrac{1}{x}$
+
+$\dfrac{\mathrm{d}y}{\mathrm{d}x} = \dfrac{yn}{x}$
+
+$\dfrac{\mathrm{d}}{\mathrm{d}x}y = \dfrac{nx^n}{x}$
+
+$\dfrac{\mathrm{d}}{\mathrm{d}x}(x^n) = nx^{n-1}$
+
+\end{center}
+\end{proof}
+
+Here is a another way.
+
+\begin{proof}
+\begin{center}
+Let $f(x) = x^n$
+\newline
+$f'(a) = \lim_{x \rightarrow a} \dfrac{f(x)-f(a)}{x-a}$
+\newline
+$ =  \lim_{x \rightarrow a} \dfrac{x^n-a^n}{x-a}$
+
+$ = \lim_{x \rightarrow a} \dfrac{\sout{(x-a)}(x^{n-1}+ax^{n-2} + a^2x^{n-3} +... + a^{n-3}x^2 + a^{n-2}x + a^{n-1}}{\sout{x-a}}$
+
+$ = \lim_{x \rightarrow a} x^{n-1}+ax^{n-2} + a^2x^{n-3} +... + a^{n-3}x^2 + a^{n-2}x + a^{n-1}$
+
+$ = \lim_{x \rightarrow a} a^{n-1}+aa^{n-2} + a^2a^{n-3} +... + a^{n-3}a^2 + a^{n-2}a + a^{n-1}$
+
+$ = \lim_{x \rightarrow a} a^{n-1}+a^{n-1} + a^{n-1} +... + a^{n-1} + a^{n-1} + a^{n-1}$
+
+$f'(a) = na^{n-1}$
+
+$f'(x) = nx^{n-1}$
+
+\end{center}
+\end{proof}
+
+
+\end{document}
+

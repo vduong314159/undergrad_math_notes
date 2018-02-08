@@ -1,0 +1,74 @@
+\documentclass{article}
+\title{Show Integral}
+\author{Vivian Duong}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+Show that 
+
+\begin{equation}
+\int_0^\infty e^{-x^2} \mathrm{d}x = \dfrac{\sqrt{\pi}}{2}
+\end{equation}
+Let
+
+\begin{center}
+$\mathrm{I} = \int_0^\infty e^{-x^2} \mathrm{d}x$
+\\
+
+$\mathrm{I^2} = \int_0^\infty e^{-x^2} \mathrm{d}x[\int_0^\infty e^{-y^2} \mathrm{d}y]$
+\\
+
+$\mathrm{I^2} = \int_0^\infty e^{-x^2} e^{-y^2}  \mathrm{d}x \mathrm{d}y$
+\\
+
+\begin{flushright}
+$r = \sqrt{x^2 + y^2}$
+\end{flushright}
+
+
+$\mathrm{I^2} = \int_0^\infty \int_0^\infty e^{-x^2 - y^2}  \mathrm{d}x \mathrm{d}y$
+\\
+
+$\mathrm{I^2} = \int_0^\infty \int_0^{\frac{\pi}{2}} e^{-r^2} r\mathrm{d}\theta \mathrm{d}r$
+\\
+
+$\mathrm{I^2} = \dfrac{\pi}{2}\int_0^\infty e^{-r^2} r\mathrm{d}r$
+\begin{flushright}
+$u = -r^2$
+
+$\mathrm{d}u = -2r\mathrm{d}r$
+
+$\dfrac{\mathrm{d}u}{-2} = r\mathrm{d}r$
+\end{flushright}
+
+$\mathrm{I^2} = \dfrac{\pi}{-4}\int_0^\infty e^{u} \mathrm{d}u$
+\\
+
+$\mathrm{I^2} = \dfrac{\pi}{-4}[e^{-r^2}|_0^\infty]$
+\\
+
+$\mathrm{I^2} = \dfrac{\pi}{-4}[\lim_{r \rightarrow \infty} e^{-r^2} - 1]$
+\\
+
+$\mathrm{I^2} = \dfrac{\pi}{-4}[0 - 1]$
+\\
+
+$\mathrm{I^2} = \dfrac{\pi}{4}$
+\\
+
+$\sqrt{\mathrm{I^2}} = \sqrt{\dfrac{\pi}{4}}$
+\\
+
+$\mathrm{I} = \dfrac{\pi}{2}$
+\\
+
+$\int_0^\infty e^{-x^2} \mathrm{d}x = \dfrac{\pi}{2}$
+
+\end{center}
+
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass{article}
+\title{A soln of a characteristic eqn is either zero everywhere or else can be zero at most once if its roots are real}
+\author{Vivian Duong}
+\date{}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{setspace} %line spacing
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\usepackage{soul}
+\usepackage{ulem} %to strike out text \sout
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+
+\begin{theorem}
+A solution of $ay" + by' + cy = 0$ is either everywhere zero or else can take on the value zero at most once if the roots of the characteristic equations are real.
+\end{theorem}
+
+\begin{equation}
+ay" + by' + cy = 0
+\end{equation}
+
+\begin{equation}
+r = \dfrac{-b \pm \sqrt{b^2 - 4ac} }{2a}
+\end{equation}
+
+\textbf{Case 1} $b^2 - 4ac = 0$
+
+\begin{center}
+$r_1 = \dfrac{-b}{2a}$, $r_2 = \dfrac{-b}{2a}$
+
+$y = c_1e^{r_1t} + c_2te^{r_2t}$
+
+$0 = e^{r_1t}(c_1 + c_2t)$
+
+An exponent can not equal zero.
+
+$ 0 \neq e^r{r_1t} $
+
+Thus, this must be true.
+
+$0 = c_1 + c_2t$
+
+$-c_2t = c_1$
+
+The solution can take on the value zero at most once if $c_1$ and $c_2$ are not zero. If $c_1$ and $c_2$ are zero, then the solution is zero everywhere. 
+\end{center}
+
+\textbf{Case 2} $b^2 - 4ac > 0$
+
+\begin{center}
+$r_1 = \dfrac{-b + sqrt{b^2 - 4ac}}{2a}$, $r_2 = \dfrac{-b - \sqrt{b^2 - 4ac}}{2a}$
+\end{center}
+
+$y = c_1e^{r_1t} + c_2e^{r_2t}$
+
+$0 = c_1e^{r_1t} + c_2e^{r_2t}$
+
+$-c_2e^{r_2t} = c_1e^{r_1t}$
+
+$\dfrac{-c_2}{c_1} = e^{t(r_1-r_2)}$
+
+$ln(\dfrac{\dfrac{-c_2}{c_1}}{r_1-r_2}) = t$
+
+$r_1 - r_2 = \dfrac{-b}{2a} - \dfrac{\sqrt{b^2 - 4ac}}{2a} - (\dfrac{-b}{2a} + \dfrac{\sqrt{b^2 - 4ac}}{2a})$
+
+$r_1 - r_2 = \dfrac{-2 \sqrt{b^2 -4ac}}{2a}$
+
+$r_1 - r_2 = \dfrac{b^2 - 4ac}{a}$
+
+$\dfrac{ln(\dfrac{-c_1}{c_2})}{\dfrac{\sqrt{b^2 - 4ac}}{a}} = t$
+
+$\dfrac{a*ln(\dfrac{-c_1}{c_2})}{\sqrt{b^2 - 4ac}} = t$
+
+$ln(\dfrac{-c_1}{c_2}) = t$ when
+
+$-c_1 = c_2$
+
+Thus, in case 2, the solution can only take on the value of zero at most once if $-c_2 = c_1$. If not, then it can not take on the value of zero anywhere. 
+
+\end{document}

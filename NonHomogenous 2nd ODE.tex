@@ -1,0 +1,52 @@
+\documentclass{article}
+\title{Non-Homogenous 2nd ODE}
+\author{Vivian Duong}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[pdftex]{hyperref}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+Claim: If $y = \phi(t)$ is a solution of the non-homogenous 2nd order differential equation 
+
+\begin{equation} \label{eqref:1}
+y" + p(t)y' + q(t)y = g(t)
+\end{equation}
+where $g(t)$ is \textit{not} always zero, then 
+\begin{equation} \label{eqref:2}
+y = c\phi(t)
+\end{equation}
+is not a solution.
+
+\begin{proof}
+Because $\eqref{eqref:2}$ is a solution of $\eqref{eqref:1}$, then
+
+\begin{equation} \label{eqref:3}
+\phi"(t) + p(t)\phi'(t) + q(t)\phi(t) = g(t)
+\end{equation}
+
+Deriving $\eqref{eqref:2}$
+
+\begin{center}
+$y = c\phi(t)$
+
+$y' = c\phi'(t)$
+
+$y" = c\phi"(t)$
+
+\end{center}
+Plugging it into $\eqref{eqref:1}$
+
+
+\begin{equation}
+c\phi"(t) + p(t)c\phi'(t) + q(t)c\phi(t) \neq g(t)
+\end{equation}
+\begin{center}
+$c(\phi"(t) + p(t)\phi'(t) + q(t)phi(t)) \neq g(t)$
+
+$c(g(t)) \neq g(t)$
+\end{center}
+
+\end{proof}
+\end{document}
